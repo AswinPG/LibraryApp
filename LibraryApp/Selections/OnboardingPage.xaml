@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LibraryApp.Selections.OnboardingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#3A3636"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <Image HeightRequest="250" Source="book.png" />
+            <Label
+                Margin="0,0,0,20"
+                FontAttributes="Bold"
+                FontSize="30"
+                Text="Enter Your Details"
+                TextColor="White" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label
+                    FontSize="18"
+                    Text="Select Semester"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Picker
+                    Title="None Selected"
+                    Margin="8,2,2,2"
+                    TextColor="White"
+                    TitleColor="LightGray"
+                    VerticalOptions="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                        </x:Array>
+
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label
+                    FontSize="18"
+                    Text="Select Department"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Picker
+                    Title="None Selected"
+                    Margin="8,2,2,2"
+                    TextColor="White"
+                    TitleColor="LightGray"
+                    VerticalOptions="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>CSE</x:String>
+                            <x:String>Mech</x:String>
+                            <x:String>IT</x:String>
+                            <x:String>Civil</x:String>
+                            <x:String>ECE</x:String>
+                            <x:String>EEE</x:String>
+                        </x:Array>
+
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+            <Button
+                Margin="0,40,0,0"
+                BackgroundColor="#3F2AB9"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                Text="Search for Books"
+                TextColor="Orange" />
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
